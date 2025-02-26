@@ -22,12 +22,15 @@ import { Result } from "@/types/searchTypes";
             Authorization:
                 "Basic " + Buffer.from(`${username}:${password}`).toString("base64"),
         },
+        next:{
+            revalidate: 60 * 60, // thats means that the next will cash the data for quick access for 1 hour
+        }
     
     })
     .then((res) => res.json())
     .then((data) => {
         if (data.results.length === 0) return null
-
+       
     const results : Result = data.results[0]
     return results
     })
@@ -38,5 +41,5 @@ import { Result } from "@/types/searchTypes";
 
     
 }
-
+ 
 export default fetchSearch
