@@ -32,8 +32,10 @@ type Props = {
 }
 
 
+
 export default async function ProductPage({ searchParams: { url } }: Props) {
     const product = await fitchProduct(url)
+
     if (!product) return notFound()
 
     return (
@@ -65,9 +67,8 @@ export default async function ProductPage({ searchParams: { url } }: Props) {
                                     <Image
                                         src={image}
                                         alt={product.content.general.title + " " + i}
-                                        width={400}
-                                        height={400}
-
+                                        width={300}
+                                        height={300}
                                     />
                                 </div>
                             </div>

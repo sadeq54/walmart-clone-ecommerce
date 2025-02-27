@@ -55,6 +55,8 @@ export interface Price {
     price_max?: number; // Optional, from the first JSON
 }
 
+
+
 export interface Rating {
     count: number;
     rating: number;

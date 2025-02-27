@@ -5,6 +5,7 @@ export interface Price {
     price_strikethrough: number;
 }
 
+
 export interface Rating {
     count: number;
     rating: number;
@@ -73,6 +74,7 @@ export interface Specification {
     key: string;
     value: string;
 }
+
 
 export interface Product {
     price: Price;
